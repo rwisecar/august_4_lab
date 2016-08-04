@@ -1,5 +1,5 @@
 'use strict';
-var select = getElementById('selector');
+var form = document.getElementById('conversionForm');
 var result;
 var conUnit;
 var unit;
@@ -11,7 +11,7 @@ function convertToIn() {
 
 function convertToCm() {
   result = (userValue * 2.54);
-  conUnit = 'Cm'
+  conUnit = 'Cm';
 }
 
 function convertToFlOz() {
@@ -35,7 +35,7 @@ function convertToKm() {
 }
 
 function convertToLbs() {
-  result = (userValue * 2.2046)
+  result = (userValue * 2.2046);
   conUnit = 'Pounds';
 }
 
@@ -57,9 +57,18 @@ function convertToMeTon() {
 }
 
 
-function handleSelect() {
+function handleConversion() {
+  event.preventDefault();
   var userValue = parseFloat(event.target.userValue.value);
+  var unit = event.target.option.value;
+
+  if (unit === null) {
+    alert('Yo, pick a unit dude.');
+  }else if (unit === 'in') {
+    convertToCm();
+    console.log('converted to cm');
+  }
 
 }
 
-selector.addEventListener('change', handleSelect);
+conversionForm.addEventListener('submit', handleConversion);
