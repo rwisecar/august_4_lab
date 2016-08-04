@@ -3,16 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>National Weather Service</title>
-    <link rel="stylesheet" type="css/text" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <a href="calc.html">Click here for calculator</a>
   </head>
   <body>
-    <header>
-      <img src="#">
-      <img src="#">
-      <h1>National Weather Service</h1>
-      <h4>National Oceanic and Atmospheric Administration</h4>
-      <img src="#">
-    </header>
+    <div class="inner">
+      <img src="img/header_noaa.png">
+      <img src="img/header_nws.png">
+      <img src="img/header_doc.png" id="lastimage">
+    </div>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
@@ -26,16 +25,19 @@
         <li><a href="#">About</a></li>
       </ul>
     </nav>
-    <section>
+    <section id="toparticle">
       <div id="searchbar">
       </div>
       <article>
         <h2>Rain, thunderstorms developing from southern Plains to mid-Atlantic</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        <a href="#">Read more...</a>
+        <a href="#" id="readmore">Read more...</a>
     </section>
-    <section>
+    <section id="current_forecast">
       <div id="seattle_bar">
+        <p> Current Conditions at </p>
+        <h2> Seattle, Seattle Boeing Field (KBFI)</h2>
+        <p><span>Lat:</span> 47.57&deg;N <span>Lon:</span> -122.41&deg;W <span>Elev:</span> 16ft</p>
       </div>
       <div id="daily_forecast">
         <img src="#">
@@ -86,18 +88,18 @@
           <li>Wednesday</li>
           <li>Wednesday Night</li>
           <li>Thursday</li>
-          <li>Thursday Ngiht</li>
+          <li>Thursday Night</li>
         </ul>
         <ul id="forecastimages">
-          <li><img src="#"></li>
-          <li><img src="#"></li>
-          <li><img src="#"></li>
-          <li><img src="#"></li>
-          <li><img src="#"></li>
-          <li><img src="#"></li>
-          <li><img src="#"></li>
-          <li><img src="#"></li>
-          <li><img src="#"></li>
+          <li><img src="img/showerslikely.png"></li>
+          <li><img src="img/showerlikelythenchanceshowers.png"></li>
+          <li><img src="img/partlycloudy.png"></li>
+          <li><img src="img/sunny.png"></li>
+          <li><img src="img/partlycloudy.png"></li>
+          <li><img src="img/partlysunny.png"></li>
+          <li><img src="img/mostlycloudy.png"></li>
+          <li><img src="img/mostlysunny.png"></li>
+          <li><img src="img/partlycloudy.png"></li>
         </ul>
         <ul id="weathercaptions">
           <li>Showers Likely</li>
